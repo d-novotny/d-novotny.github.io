@@ -4,7 +4,7 @@
 	<head>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114596290-1"></script>
+<!-- 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114596290-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
@@ -12,6 +12,19 @@
 
 		  gtag('config', 'UA-114596290-1');
 		</script>
+ -->
+
+		<!-- Google Analytics -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-114596290-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- End Google Analytics -->
 
 		<title>David Novotny</title>
 		<meta charset="utf-8" />
@@ -80,7 +93,9 @@
 									<i>Novotny, D. and Larlus, D. and Vedaldi, A.</i> <br>
 									<strong class="hoverable">AnchorNet: A Weakly Supervised Network to Learn Geometry-sensitive Features For Semantic Matching</strong></br>
 									CVPR 2017<br>
-									<a href="papers/novotny17anchornet.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
+									<a href="papers/novotny17anchornet.pdf" class="button tiny"
+									onclick="ga('send', 'event', '_trackEvent', 'Download', 'anetCode');"
+									><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
 									<a href="posters/poster_anet.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
 									<a href="anchornet/anchornet_code_v0.1.zip" class="button tiny"><i class="fa fa-code" aria-hidden="true"></i>&nbsp code</a>
 									<a href="https://scholar.google.cz/citations?view_op=view_citation&hl=en&user=2glXz7cAAAAJ&citation_for_view=2glXz7cAAAAJ:zYLM7Y9cAGgC" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp scholar</a>
