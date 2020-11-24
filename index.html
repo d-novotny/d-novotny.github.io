@@ -15,6 +15,9 @@
 		</script>
 		<!-- End Google Analytics -->
 
+
+		
+
 		<title>David Novotny</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,6 +27,8 @@
 		
 	</head>
 	<body id="top">
+
+		
 
 		<!-- Header -->
 			<header id="header">
@@ -40,6 +45,20 @@
 			<div id="main">
 
 				<!-- One -->
+
+					<div id="redirect_div" style="color:red; font-size: 20px;">a</div>
+					<script>
+						var host = window.location.host
+						console.log(host)
+						var redirect_div = document.getElementById("redirect_div")
+						if (host != 'd-novotny.github.io'){
+							redirect_div.innerHTML = "You have reached a deprecated page connected" +
+								" to my previous Oxford University affiliation." +
+								" Please redirect to the current site:" +
+								" <a href=\"http://d-novotny.github.io\"> http://d-novotny.github.io</a>"
+						}
+					</script>
+
 					<section id="about">
 						<h3>About</h3>
 						<div class="row">
