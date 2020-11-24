@@ -28,8 +28,6 @@
 	</head>
 	<body id="top">
 
-		
-
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
@@ -44,21 +42,23 @@
 		<!-- Main -->
 			<div id="main">
 
-				<!-- One -->
-
-					<div id="redirect_div" style="color:red; font-size: 20px;"></div>
+				<!-- Deprecation message -->
 					<script>
 						var host = window.location.host
-						console.log(host)
-						var redirect_div = document.getElementById("redirect_div")
 						if (host != 'd-novotny.github.io'){
-							redirect_div.innerHTML = "You have reached a deprecated page connected" +
+							var main_div = document.getElementById("main")
+							var depr_div = ""
+							depr_div += "<div id=\"redirect_div\" style=\"color:red; font-size: 20px;\">"
+							depr_div += "You have reached a deprecated page connected" +
 								" to my previous Oxford University affiliation." +
 								" Please redirect to the current site:" +
 								" <a href=\"http://d-novotny.github.io\"> http://d-novotny.github.io</a>"
+							depr_div += "</div>"
+							main_div.innerHTML = depr_div + main_div.innerHTML
 						}
 					</script>
 
+				<!-- One -->
 					<section id="about">
 						<h3>About</h3>
 						<div class="row">
