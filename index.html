@@ -15,16 +15,31 @@
 		</script>
 		<!-- End Google Analytics -->
 
-
-		
-
 		<title>David Novotny</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		
+
+		<!-- Deprecation message -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				var host = window.location.host
+				if (host != 'd-novotny.github.io'){
+					var main_div = document.getElementById("main")
+					var depr_div = ""
+					depr_div += "<div id=\"redirect_div\" style=\"color:red; font-size: 20px;\">"
+					depr_div += "You have reached a deprecated page connected" +
+						" to my previous Oxford University affiliation." +
+						" Please redirect to the current site:" +
+						" <a href=\"http://d-novotny.github.io\"> http://d-novotny.github.io</a>"
+					depr_div += "</div>"
+					main_div.innerHTML = depr_div + main_div.innerHTML
+				}
+			});
+		</script>
+
 	</head>
 	<body id="top">
 
@@ -41,23 +56,6 @@
 
 		<!-- Main -->
 			<div id="main">
-
-				<!-- Deprecation message -->
-					<script>
-						var host = window.location.host
-						if (host != 'd-novotny.github.io'){
-							var main_div = document.getElementById("main")
-							var depr_div = ""
-							depr_div += "<div id=\"redirect_div\" style=\"color:red; font-size: 20px;\">"
-							depr_div += "You have reached a deprecated page connected" +
-								" to my previous Oxford University affiliation." +
-								" Please redirect to the current site:" +
-								" <a href=\"http://d-novotny.github.io\"> http://d-novotny.github.io</a>"
-							depr_div += "</div>"
-							main_div.innerHTML = depr_div + main_div.innerHTML
-						}
-					</script>
-
 				<!-- One -->
 					<section id="about">
 						<h3>About</h3>
@@ -265,4 +263,5 @@
 
 
 	</body>
+
 </html>
