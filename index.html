@@ -78,88 +78,9 @@
 
 				<!-- Two -->
 					<section id="publications">
-
 						<h3>Publications</h3>
-
-						<!-- <script>
-							const fs = require('fs');
-							fs.readFile('entries.json', 'utf8', (err, data) => {
-								if (err) throw err;
-								const json_data = JSON.parse(data);
-								for (const paper_id in json_data) {
-									console.log(`${paper_id}: ${json_data[paper_id]}`);
-									paper_entry = json_data[paper_id];
-
-									// make the div for the paper entry
-									const div = document.createElement('div');
-									div.className = "row 100% uniform";
-
-									// make thumbnail
-									const thumb_extensions = ["gif", "png", "jpg", "jpeg"];
-									thumb_extensions.forEach((thumb_extension) => {
-										thumb_path = "paper_thumbs/thumb_" + paper_id + "." + thumb_extension;
-										if (fs.existsSync(thumb_path)) {
-											div.innerHTML += `<div class="4u"><span class="image fit"><img src="${thumb_path}" alt="" /></span></div>`;
-										}
-									});
-
-									// main image par
-									div.innerHTML += '<div class="8u"> <p>';
-									
-									// make author field
-									author_string = paper_entry["authors"]
-									div.innerHTML += `<i>${author_string}</i><br>`;
-									
-									// make title field
-									title_string = paper_entry["title"]
-									div.innerHTML += `<strong class="hoverable">${title_string}</strong></br>`
-
-									// add extra fields
-									journal_string = paper_entry["journal"]
-									div.innerHTML += `${journal_string}`
-									note_string = paper_entry["note"]
-									div.innerHTML += `, ${note_string}`
-									extra_note_string = paper_entry["extra_note"]
-									div.innerHTML += `, <strong style="color:#8BBE6A">${extra_note_string}</strong>`
-									div.innerHTML += `<br>`
-
-									// paper button
-									paper_file = `papers/${paper_id}.pdf`
-									div.innerHTML += `<a href=${paper_file} class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>`
-
-									// other buttons
-									buttons = paper_entry["bottons"]
-									button.forEach((buttons) => {
-										link = buttons[button][0]
-										icon = buttons[button][1]
-										`<a href="${link}" class="button tiny"><i class="${icon}" aria-hidden="true"></i>&nbsp ${button}</a>`
-									});
-
-									div.innerHTML += `</div>`;
-
-									document.body.getElementById('publist').appendChild(div);
-
-								}								
-							});
-
-						</script>					 -->
-							
 						<div id="publist" class="box alt">
-
-								<!-- <div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_co3d.gif" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Reizenstein, J. and Shapovalov, R. and Henzler, P. and Sbordone, L. and Labatut, P. and Novotny, D.</i><br>
-									<strong class="hoverable">Common Objects in 3D: Large-Scale Learning and Evaluation of Real-life 3D Category Reconstruction</strong></br>
-									ICCV 2021, oral presentation, <strong style="color:#8BBE6A">Best Paper Honorable Mention</strong><br>
-									<a href="papers/reizenstein21co3d.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="https://github.com/facebookresearch/co3d" class="button tiny"><i class="fa fa-code" aria-hidden="true"></i>&nbsp code</a>
-									<a href="https://ai.facebook.com/datasets/co3d-downloads/" class="button tiny"><i class="fa fa-database" aria-hidden="true"></i>&nbsp dataset</a>
-									<a href="https://ai.facebook.com/datasets/CO3D-dataset/" class="button tiny"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp project page</a>
-									<a href="https://www.youtube.com/watch?v=hMx9nzG50xQ" class="button tiny"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp talk</a>	
-									</div>
-								</div> -->
-
+							<!-- These entries filled dynamically inside assets/js/bib_entries.js -->
 						</div>						
 					</section>
 
@@ -187,10 +108,6 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/bib_entries.js"></script>
-
-
-
-
 
 	</body>
 
