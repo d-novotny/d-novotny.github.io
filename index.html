@@ -80,10 +80,73 @@
 					<section id="publications">
 
 						<h3>Publications</h3>
-					
-							<div class="box alt">
 
-								<div class="row 100% uniform">
+						<!-- <script>
+							const fs = require('fs');
+							fs.readFile('entries.json', 'utf8', (err, data) => {
+								if (err) throw err;
+								const json_data = JSON.parse(data);
+								for (const paper_id in json_data) {
+									console.log(`${paper_id}: ${json_data[paper_id]}`);
+									paper_entry = json_data[paper_id];
+
+									// make the div for the paper entry
+									const div = document.createElement('div');
+									div.className = "row 100% uniform";
+
+									// make thumbnail
+									const thumb_extensions = ["gif", "png", "jpg", "jpeg"];
+									thumb_extensions.forEach((thumb_extension) => {
+										thumb_path = "paper_thumbs/thumb_" + paper_id + "." + thumb_extension;
+										if (fs.existsSync(thumb_path)) {
+											div.innerHTML += `<div class="4u"><span class="image fit"><img src="${thumb_path}" alt="" /></span></div>`;
+										}
+									});
+
+									// main image par
+									div.innerHTML += '<div class="8u"> <p>';
+									
+									// make author field
+									author_string = paper_entry["authors"]
+									div.innerHTML += `<i>${author_string}</i><br>`;
+									
+									// make title field
+									title_string = paper_entry["title"]
+									div.innerHTML += `<strong class="hoverable">${title_string}</strong></br>`
+
+									// add extra fields
+									journal_string = paper_entry["journal"]
+									div.innerHTML += `${journal_string}`
+									note_string = paper_entry["note"]
+									div.innerHTML += `, ${note_string}`
+									extra_note_string = paper_entry["extra_note"]
+									div.innerHTML += `, <strong style="color:#8BBE6A">${extra_note_string}</strong>`
+									div.innerHTML += `<br>`
+
+									// paper button
+									paper_file = `papers/${paper_id}.pdf`
+									div.innerHTML += `<a href=${paper_file} class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>`
+
+									// other buttons
+									buttons = paper_entry["bottons"]
+									button.forEach((buttons) => {
+										link = buttons[button][0]
+										icon = buttons[button][1]
+										`<a href="${link}" class="button tiny"><i class="${icon}" aria-hidden="true"></i>&nbsp ${button}</a>`
+									});
+
+									div.innerHTML += `</div>`;
+
+									document.body.getElementById('publist').appendChild(div);
+
+								}								
+							});
+
+						</script>					 -->
+							
+						<div id="publist" class="box alt">
+
+								<!-- <div class="row 100% uniform">
 									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_co3d.gif" alt="" /></span></div>
 									<div class="8u"> <p>
 									<i>Reizenstein, J. and Shapovalov, R. and Henzler, P. and Sbordone, L. and Labatut, P. and Novotny, D.</i><br>
@@ -95,228 +158,9 @@
 									<a href="https://ai.facebook.com/datasets/CO3D-dataset/" class="button tiny"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp project page</a>
 									<a href="https://www.youtube.com/watch?v=hMx9nzG50xQ" class="button tiny"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp talk</a>	
 									</div>
-								</div>
+								</div> -->
 
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_unsup_in_the_wild.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Henzler, P. and Reizenstein, J. and Labatut, P. and Shapovalov, R. and Ritschel, T. and Vedaldi, A. and Novotny, D.</i><br>
-									<strong class="hoverable">Unsupervised Learning of 3D Object Categories from Videos in the Wild</strong></br>CVPR 2021<br>
-									<a href="papers/henzler21unsupervised.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="https://openaccess.thecvf.com/content/CVPR2021/html/Henzler_Unsupervised_Learning_of_3D_Object_Categories_From_Videos_in_the_CVPR_2021_paper.html" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp cvf</a>
-									<a href="https://henzler.github.io/publication/unsupervised_videos/UnsupervisedVideosPoster.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="https://youtu.be/910z84dldEU" class="button tiny"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp talk</a>	
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_neuromorph.gif" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Eisenberger, M. and Novotny, D. and Kerchenbaum, G. and Labatut, P. and Neverova, N. and Cremers, D. and Vedaldi, A.</i><br>
-									<strong class="hoverable">NeuroMorph: Unsupervised Shape Interpolation and Correspondence in One Go</strong></br>
-									CVPR 2021<br>
-									<a href="papers/eisenberger21neuromorph.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="hhttps://openaccess.thecvf.com/content/CVPR2021/html/Eisenberger_NeuroMorph_Unsupervised_Shape_Interpolation_and_Correspondence_in_One_Go_CVPR_2021_paper.html" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp cvf</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_3dmulti.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Biggs, B. and Ehrhadt, S. and Joo, H. and Graham, B. and Vedaldi, A. and Novotny, D.</i><br>
-									<strong class="hoverable">3D Multi-bodies: Fitting Sets of Plausible 3D Human Models to Ambiguous Image Data</strong></br>
-									NeurIPS 2020, spotlight presentation<br>
-									<a href="papers/biggs203dmulti.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="https://sites.google.com/view/3dmb/home" class="button tiny"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp project page</a>
-									<a href="https://nips.cc/Conferences/2020/ScheduleMultitrack?event=18543" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp NeurIPS</a>
-									<a href="https://youtu.be/uSvswzbQ-Q8" class="button tiny"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp talk</a>	
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_ridgesfm_2.png" alt="animated" /></span></div>
-									<div class="8u"> <p>
-									<i>Graham, B. and Novotny, D.</i><br>
-									<strong class="hoverable">RidgeSfM: Structure from Motion via Robust Pairwise Matching Under Depth Uncertainty</strong></br>
-									3DV 2020<br>
-									<a href="papers/graham20ridgesfm.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="https://github.com/facebookresearch/RidgeSfM" class="button tiny"><i class="fa fa-code" aria-hidden="true"></i>&nbsp code</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_c3dm.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D.* and Shapovalov, R.* and Vedaldi, A.</i> <br>
-									<strong class="hoverable">Canonical 3D Deformer Maps: Unifying Parametric and Non-parametric Methods for Dense Weakly-supervised Category Reconstruction</strong></br>
-									NeurIPS 2020<br>
-									<a href="papers/novotny20c3dm.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_c3dm.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="https://github.com/facebookresearch/c3dm" class="button tiny"><i class="fa fa-code" aria-hidden="true"></i>&nbsp code</a>
-									<a href="https://papers.nips.cc/paper/2020/hash/efe34c4e2190e97d1adc625902822b13-Abstract.html" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp NeurIPS</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_cse.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Neverova, N. and Novotny, D. and Khalidov, V. and Szafraniec, M. and Labatut, P. and Vedaldi, A.</i><br>
-									<strong class="hoverable">Continuous Surface Embeddings</strong></br>
-									NeurIPS 2020<br>
-									<a href="papers/neverova20cse.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="https://nips.cc/Conferences/2020/ScheduleMultitrack?event=16798" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp NeurIPS</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_perspectivenet.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D. and Graham, B. and Reizenstein, J.</i> <br>
-									<strong class="hoverable">PerspectiveNet: A Scene-consistent Image Generator for New View Synthesis in Real Indoor Environments</strong></br>
-									NeurIPS 2019<br>
-									<a href="papers/novotny19perspectivenet.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_perspectivenet.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="https://papers.nips.cc/paper/8977-perspectivenet-a-scene-consistent-image-generator-for-new-view-synthesis-in-real-indoor-environments" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp NeurIPS</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<!-- <img src="paperThumbs/thumb_capturing.gif" alt=”animated”/> -->
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_c3dpo.gif" alt="animated" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D.* and Ravi, N.* and Graham, B. and Neverova, N. and Vedaldi, A.</i> <br>
-									<strong class="hoverable">C3DPO: Canonical 3D Pose Networks for Non-Rigid Structure From Motion</strong></br>
-									ICCV 2019, oral presentation<br>
-									<a href="papers/novotny19c3dpo.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="https://github.com/facebookresearch/c3dpo_nrsfm" class="button tiny"><i class="fa fa-code" aria-hidden="true"></i>&nbsp code</a>
-									<a href="posters/poster_c3dpo.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="https://youtu.be/zem03fZWLrQ?t=2303" class="button tiny"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp talk</a>
-									<a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Novotny_C3DPO_Canonical_3D_Pose_Networks_for_Non-Rigid_Structure_From_Motion_ICCV_2019_paper.html" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp cvf</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<!-- <img src="paperThumbs/thumb_capturing.gif" alt=”animated”/> -->
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_capturing.gif" alt="animated" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D. and Larlus, D. and Vedaldi, A.</i> <br>
-									<strong class="hoverable">Capturing the Geometry of Object Categories from Video Supervision</strong></br>
-									TPAMI 2018<br>
-									<a href="papers/novotny18capturing.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="https://ieeexplore.ieee.org/document/8468042" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp ieee</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_semi.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D.* and Albanie, S.* and Larlus, D. and Vedaldi, A.</i> <br>
-									<strong class="hoverable">Semi-convolutional Operators for Instance Segmentation</strong></br>
-									ECCV 2018<br>
-									<a href="papers/novotny18semi.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_semi.png" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Samuel_Albanie_Semi-convolutional_Operators_for_ECCV_2018_paper.html" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp cvf</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_self.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D.* and Albanie, S.* and Larlus, D. and Vedaldi, A.</i> <br>
-									<strong class="hoverable">Self-supervised Learning of Geometrically Stable Features Through Probabilistic Introspection</strong></br>
-									CVPR 2018, spotlight <br>
-									<a href="papers/novotny18self.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_self.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="https://www.facebook.com/CVPR2018/videos/1994396307555935/" class="button tiny"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp talk (starts at 1:25:00)</a>
-									<a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2827.pdf" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp cvf</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_vpdr.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D. and Larlus, D. and Vedaldi, A.</i> <br>
-									<strong class="hoverable">Learning 3D Object Categories by Looking Around Them</strong></br>
-									ICCV 2017, oral presentation <br>
-									<a href="papers/novotny17learning.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_learning.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="https://www.youtube.com/watch?v=esYBbQuKFZU&t=" class="button tiny"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp talk</a>
-									<a href="https://scholar.google.cz/citations?view_op=view_citation&hl=en&user=2glXz7cAAAAJ&citation_for_view=2glXz7cAAAAJ:Tyk-4Ss8FVUC" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp scholar</a>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_anchornet.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D. and Larlus, D. and Vedaldi, A.</i> <br>
-									<strong class="hoverable">AnchorNet: A Weakly Supervised Network to Learn Geometry-sensitive Features For Semantic Matching</strong></br>
-									CVPR 2017<br>
-									<a href="papers/novotny17anchornet.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_anet.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="code/anchornet_code_v0.1.zip" class="button tiny" onclick="javascript:ga('send', 'event', '_trackEvent', 'Download', 'anetCode');"
-									><i class="fa fa-code" aria-hidden="true"></i>&nbsp code</a>
-									<a href="https://scholar.google.cz/citations?view_op=view_citation&hl=en&user=2glXz7cAAAAJ&citation_for_view=2glXz7cAAAAJ:zYLM7Y9cAGgC" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp scholar</a>
-									</p>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_partTransfer.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D. and Larlus, D. and Vedaldi, A.</i> <br>
-									<strong class="hoverable">I Have Seen Enough: Transferring Parts Across Categories</strong></br>
-									BMVC 2016 <br>
-									<a href="papers/novotny16ihave.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_ihave.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="https://scholar.google.cz/citations?view_op=view_citation&hl=en&user=2glXz7cAAAAJ&citation_for_view=2glXz7cAAAAJ:UeHWp8X0CEIC" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp scholar</a>
-									<a href="http://www.robots.ox.ac.uk/~vgg/data/animal_parts/" class="button tiny"><i class="fa fa-database" aria-hidden="true"></i>&nbsp dataset</a>
-									</p>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_webparts.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D. and Larlus, D. and Vedaldi, A.</i> <br>
-									<strong class="hoverable">Learning the Structure of Objects from Web Supervision</strong></br>
-									ECCV 2016 Workshops, Oral presentation <br>
-									<a href="papers/novotny16learning.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_webparts.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="https://scholar.google.cz/citations?view_op=view_citation&hl=en&user=2glXz7cAAAAJ&citation_for_view=2glXz7cAAAAJ:IjCSPb-OGe4C" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp scholar</a>
-									</p>
-									</div>
-								</div>
-
-								<div class="row 100% uniform">
-									<div class="4u"><span class="image fit"><img src="paperThumbs/thumb_sspb.png" alt="" /></span></div>
-									<div class="8u"> <p>
-									<i>Novotny, D. and Matas, J. </i> <br>
-									<strong class="hoverable">Cascaded Sparse Spatial Bins for Efficient and Effective Generic Object Detection</strong></br>
-									ICCV 2015 <br>
-									<a href="papers/novotny15cascaded.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="posters/poster_cascaded.pdf" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp poster</a>
-									<a href="goodies/iccv15spotlight.mp4" class="button tiny"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp video</a>
-									<a href="https://scholar.google.cz/citations?view_op=view_citation&hl=en&user=2glXz7cAAAAJ&citation_for_view=2glXz7cAAAAJ:qjMakFHDy7sC" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp scholar</a>
-									</p>
-									</div>
-								</div>
-
-							</div>	
-
-						<h3>Other</h3>
-
-								<div class="row 100% uniform">
-									<!-- <div class="4u"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div> -->
-									<div class="8u"> <p>
-									<i>Novotny, D. and Larlus, D. and Perronnin, F. and Vedaldi, A. </i> <br>
-									<strong class="hoverable">Understanding the Fisher Vector: a Multimodal Part Model</strong></br>
-									arXiv 2015 <br>
-									<a href="papers/novotny15understanding.pdf" class="button tiny"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp pdf</a>
-									<a href="https://scholar.google.cz/citations?view_op=view_citation&hl=en&user=2glXz7cAAAAJ&citation_for_view=2glXz7cAAAAJ:d1gkVwhDpl0C" class="button tiny"><i class="fa fa-google" aria-hidden="true"></i>&nbsp scholar</a>
-									</p>
-									</div>
-								</div>						
-
+						</div>						
 					</section>
 
 			</div>
@@ -342,6 +186,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/bib_entries.js"></script>
 
 
 
