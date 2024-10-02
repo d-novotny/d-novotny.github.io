@@ -1,13 +1,5 @@
 // TO ADD:
 
-// @inproceedings{shapovalov2021densepose,
-//     title={DensePose 3D: Lifting canonical surface maps of articulated objects to the third dimension},
-//     author={Shapovalov, Roman and Novotny, David and Graham, Benjamin and Labatut, Patrick and Vedaldi, Andrea},
-//     booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-//     pages={11729--11739},
-//     year={2021}
-//   }
-  
 //   @article{ortiz2022isdf,
 //     title={isdf: Real-time neural signed distance fields for robot perception},
 //     author={Ortiz, Joseph and Clegg, Alexander and Dong, Jing and Sucar, Edgar and Novotny, David and Zollhoefer, Michael and Mukadam, Mustafa},
@@ -158,11 +150,6 @@
 //     year={2024}
 //   }
   
-//   @article{wangvggsfm,
-//     title={VGGSfM: Visual Geometry Grounded Deep Structure From Motion--Supplementary Material--},
-//     author={Wang, Jianyuan and Karaev, Nikita and Rupprecht, Christian and Novotny, David}
-//   }
-  
 //   @article{siddiqui2024meta,
 //     title={Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials},
 //     author={Siddiqui, Yawar and Monnier, Tom and Kokkinos, Filippos and Kariya, Mahendra and Kleiman, Yanir and Garreau, Emilien and Gafni, Oran and Neverova, Natalia and Vedaldi, Andrea and Shapovalov, Roman and others},
@@ -179,6 +166,39 @@
 
 
 bib_data = {
+
+//   @inproceedings{avraham2022nerfels,
+//     title={Nerfels: renderable neural codes for improved camera pose estimation},
+//     author={Avraham, Gil and Straub, Julian and Shen, Tianwei and Yang, Tsun-Yi and Germain, Hugo and Sweeney, Chris and Balntas, Vasileios and Novotny, David and DeTone, Daniel and Newcombe, Richard},
+//     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+//     pages={5061--5070},
+//     year={2022}
+//   }
+  
+//   @inproceedings{germain2022feature,
+//     title={Feature query networks: Neural surface description for camera pose refinement},
+//     author={Germain, Hugo and DeTone, Daniel and Pascoe, Geoffrey and Schmidt, Tanner and Novotny, David and Newcombe, Richard and Sweeney, Chris and Szeliski, Richard and Balntas, Vasileios},
+//     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+//     pages={5071--5081},
+//     year={2022}
+//   }
+
+    "ortiz2022isdf": {
+        "title": "isdf: Real-time neural signed distance fields for robot perception",
+        "author": "Ortiz, J. and Clegg, A. and Dong, J. and Sucar, E. and Novotny, D. and Zollhoefer, M. and Mukadam, M.",
+        "journal": "RSS 2022",
+        "buttons": {
+            "code": ["https://github.com/facebookresearch/iSDF", "fa fa-code"],
+            "project page": ["https://github.com/facebookresearch/iSDF", "fa fa-lightbulb-o"],
+            "talk": ["https://www.youtube.com/watch?v=mAKGl1wBSic&ab_channel=JosephOrtiz", "fa fa-video-camera"],
+        }
+    },
+    "shapovalov2021densepose": {
+        "title": "DensePose 3D: Lifting canonical surface maps of articulated objects to the third dimension",
+        "author": "Shapovalov, R. and Novotny, D. and Graham, B. and Labatut, P. and Vedaldi, A.",
+        "journal": "ICCV 2021",
+        "note": "oral presentation",
+    },
     "reizenstein21co3d": {
         "author": "Reizenstein, J. and Shapovalov, R. and Henzler, P. and Sbordone, L. and Labatut, P. and Novotny, D.",
         "title": "Common Objects in 3D: Large-Scale Learning and Evaluation of Real-life 3D Category Reconstruction",
@@ -187,7 +207,7 @@ bib_data = {
         "extra_note": "Best Paper Honorable Mention",
         "is_gif_thumb": true,
         "buttons": {
-            "dataset": ["https://ai.facebook.com/datasets/co3d-downloads/", "fa fa-database"],
+            "code": ["https://github.com/facebookresearch/co3d", "fa fa-code"],
             "project page": ["https://ai.facebook.com/datasets/CO3D-dataset/", "fa fa-lightbulb-o"],
             "talk": ["https://www.youtube.com/watch?v=hMx9nzG50xQ", "fa fa-video-camera"]
         }
