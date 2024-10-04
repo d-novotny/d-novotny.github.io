@@ -443,7 +443,7 @@ var bib_data = {
         "thumbnail": "paper_thumbs/thumb_neverova20continuous.png"
     },
     "biggs203dmulti": {
-        "author": "Biggs, B. and Novotny, D. and Ehrhardt, S. and Joo, H. and Graham, B. and Vedaldi, A.",
+        "author": "Biggs, B. and Ehrhardt, S. and Joo, H. and Graham, B. and Vedaldi, A. and Novotny, D.",
         "title": "3d multi-bodies: Fitting sets of plausible 3d human models to ambiguous image data",
         "year": "2020",
         "note": "spotlight presentation",
