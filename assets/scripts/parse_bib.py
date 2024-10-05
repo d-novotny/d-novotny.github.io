@@ -15,6 +15,7 @@ FIELDS_TO_BUTTONS = {
 
 FIELDS_TO_BUTTON_NAMES = {
     "projectpage": "project page",
+    "link": "pdf",
 }
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
