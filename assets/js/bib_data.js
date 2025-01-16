@@ -1,4 +1,25 @@
 var bib_data = {
+    "liu25uco3d": {
+        "author": "Liu, X. and Tayal, P. and Wang, J. and Zarzar, J. and Monnier, T. and Tertikas, K. and Duan, J. and Toisoul, A. and Zhang, J. and Neverova, N. and Vedaldi, A. and Shapovalov, R. and Novotny, D.",
+        "title": "UnCommon Objects in 3D",
+        "year": "2025",
+        "journal": "arXiv",
+        "buttons": {
+            "code": [
+                "https://github.com/facebookresearch/uco3d",
+                "fa fa-code"
+            ],
+            "project page": [
+                "https://uco3d.github.io/",
+                "fa fa-lightbulb-o"
+            ],
+            "pdf": [
+                "https://arxiv.org/pdf/2501.07574",
+                "fa fa-file-pdf-o"
+            ]
+        },
+        "thumbnail": "paper_thumbs/thumb_liu25uco3d.gif"
+    },
     "siddiqui24meta": {
         "author": "Siddiqui, Y. and Monnier, T. and Kokkinos, F. and Kariya, M. and Kleiman, Y. and Garreau, E. and Gafni, O. and Neverova, N. and Vedaldi, A. and Shapovalov, R. and Novotny, D.",
         "title": "Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials",
