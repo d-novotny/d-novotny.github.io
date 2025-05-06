@@ -11,11 +11,13 @@ FIELDS_TO_BUTTONS = {
     "video": "fa fa-picture-o",
     "link": "fa fa-file-pdf-o",
     "dataset": "fa fa-database",
+    "demo": "fa fa-desktop",
 }
 
 FIELDS_TO_BUTTON_NAMES = {
     "projectpage": "project page",
     "link": "pdf",
+    "demo": "demo",
 }
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))

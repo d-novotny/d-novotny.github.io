@@ -1,9 +1,34 @@
 var bib_data = {
+    "wang25vggt": {
+        "author": "Wang, J. and Chen, M. and Karaev, N. and Vedaldi, A. and Rupprecht, C. and Novotny, D.",
+        "title": "VGGT: Visual Geometry Grounded Transformer",
+        "year": "2025",
+        "journal": "CVPR",
+        "buttons": {
+            "pdf": [
+                "https://arxiv.org/abs/2503.11651",
+                "fa fa-file-pdf-o"
+            ],
+            "project page": [
+                "https://vgg-t.github.io/",
+                "fa fa-lightbulb-o"
+            ],
+            "code": [
+                "https://github.com/facebookresearch/vggt",
+                "fa fa-code"
+            ],
+            "demo": [
+                "https://huggingface.co/spaces/facebook/vggt",
+                "fa fa-desktop"
+            ]
+        },
+        "thumbnail": "paper_thumbs/thumb_wang25vggt.gif"
+    },
     "liu25uco3d": {
         "author": "Liu, X. and Tayal, P. and Wang, J. and Zarzar, J. and Monnier, T. and Tertikas, K. and Duan, J. and Toisoul, A. and Zhang, J. and Neverova, N. and Vedaldi, A. and Shapovalov, R. and Novotny, D.",
         "title": "UnCommon Objects in 3D",
         "year": "2025",
-        "journal": "arXiv",
+        "journal": "CVPR",
         "buttons": {
             "code": [
                 "https://github.com/facebookresearch/uco3d",
@@ -19,6 +44,53 @@ var bib_data = {
             ]
         },
         "thumbnail": "paper_thumbs/thumb_liu25uco3d.gif"
+    },
+    "sabathier25lim": {
+        "author": "Sabathier, R. and Mitra, N. and Novotny, D.",
+        "title": "LIM: Large Interpolator Model for Dynamic Reconstruction",
+        "year": "2025",
+        "journal": "CVPR",
+        "buttons": {
+            "project page": [
+                "https://remysabathier.github.io/lim.github.io/",
+                "fa fa-lightbulb-o"
+            ],
+            "pdf": [
+                "https://arxiv.org/pdf/2503.22537",
+                "fa fa-file-pdf-o"
+            ]
+        },
+        "thumbnail": "paper_thumbs/thumb_sabathier25lim.gif"
+    },
+    "zarzar25twinner": {
+        "author": "Zarzar, J. and Monnier, T. and Shapovalov, R. and Vedaldi, A. and Novotny, D.",
+        "title": "Twinner: Shining Light on Digital Twins in a Few Snaps",
+        "year": "2025",
+        "journal": "CVPR",
+        "buttons": {
+            "pdf": [
+                "https://arxiv.org/pdf/2503.08382",
+                "fa fa-file-pdf-o"
+            ]
+        },
+        "thumbnail": "paper_thumbs/thumb_zarzar25twinner.png"
+    },
+    "chen25partgen": {
+        "author": "Chen, M. and Shapovalov, R. and Laina, I. and Monnier, T. and Wang, J. and Novotny, D. and Vedaldi, A.",
+        "title": "PartGen: Part-level 3D Generation and Reconstruction with Multi-View Diffusion Models",
+        "year": "2025",
+        "journal": "CVPR",
+        "buttons": {
+            "project page": [
+                "https://silent-chen.github.io/PartGen/",
+                "fa fa-lightbulb-o"
+            ],
+            "pdf": [
+                "https://arxiv.org/pdf/2412.18608",
+                "fa fa-file-pdf-o"
+            ]
+        },
+        "thumbnail": "paper_thumbs/thumb_chen25partgen.gif"
     },
     "siddiqui24meta": {
         "author": "Siddiqui, Y. and Monnier, T. and Kokkinos, F. and Kariya, M. and Kleiman, Y. and Garreau, E. and Gafni, O. and Neverova, N. and Vedaldi, A. and Shapovalov, R. and Novotny, D.",
