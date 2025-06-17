@@ -3,23 +3,24 @@ var bib_data = {
         "author": "Wang, J. and Chen, M. and Karaev, N. and Vedaldi, A. and Rupprecht, C. and Novotny, D.",
         "title": "VGGT: Visual Geometry Grounded Transformer",
         "year": "2025",
+        "extranote": "CVPR'25 Best Paper Award",
         "journal": "CVPR",
         "buttons": {
-            "pdf": [
-                "https://arxiv.org/abs/2503.11651",
-                "fa fa-file-pdf-o"
-            ],
             "project page": [
                 "https://vgg-t.github.io/",
                 "fa fa-lightbulb-o"
             ],
-            "code": [
-                "https://github.com/facebookresearch/vggt",
-                "fa fa-code"
-            ],
             "demo": [
                 "https://huggingface.co/spaces/facebook/vggt",
                 "fa fa-desktop"
+            ],
+            "pdf": [
+                "https://arxiv.org/abs/2503.11651",
+                "fa fa-file-pdf-o"
+            ],
+            "code": [
+                "https://github.com/facebookresearch/vggt",
+                "fa fa-code"
             ]
         },
         "thumbnail": "paper_thumbs/thumb_wang25vggt.gif"
